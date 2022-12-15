@@ -20,5 +20,10 @@ npm run build
 npm run lint
 ```
 
+### Link to live page
+```
+https://sheismo.github.io/my-weather-app
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
