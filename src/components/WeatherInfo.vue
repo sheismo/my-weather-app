@@ -183,7 +183,11 @@ export default {
         "Friday",
         "Saturday",
       ];
-      return days[new Date(`${year}, ${month}, ${day}`).getDay()];
+      let day1 = days[new Date(`${year}, ${month}, ${day}`).getDay()];
+      let day2 = days[new Date(`${year}- ${month}- ${day}`).getDay()];
+
+      let theDay = day1 ? day1 : day2;
+      return theDay;
     },
     getMonth(day, month, year) {
       const months = [
@@ -200,7 +204,11 @@ export default {
         "November",
         "December",
       ];
-      return months[new Date(`${year}, ${month}, ${day}`).getMonth()];
+      let month1 = months[new Date(`${year}, ${month}, ${day}`).getMonth()];
+      let month2 = months[new Date(`${year}, ${month}, ${day}`).getMonth()];
+
+      let theMonth = month1 ? month1 : month2;
+      return theMonth;
     },
     getWeatherData() {
       fetch(
