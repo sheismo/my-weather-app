@@ -474,7 +474,7 @@ body {
 /* initial design view for desktop and large screen sizes */
 div.container {
   width: 100%;
-  min-height: 110vh;
+  height: clamp(100vh, 650px, 110vh);
   position: relative;
 }
 
@@ -542,7 +542,7 @@ h1 {
 }
 
 .spans {
-  width: 30%;
+  width: 40%;
   margin: -20px auto 25px;
   display: flex;
   justify-content: center;
@@ -636,7 +636,7 @@ button:hover {
 /* responsive view for tablets and medium screen sizes */
 @media (min-width: 769px) and (max-width: 992px) {
   div.container {
-    max-height: 140vh;
+    height: clamp(100vh, 1000px, 120vh);
   }
 
   div.content {
@@ -681,7 +681,7 @@ button:hover {
 /* responsive view for mobile phones and small screen sizes */
 @media (max-width: 768px) {
   div.container {
-    max-height: 120vh;
+    height: clamp(100vh, 800px, 110vh);
   }
 
   div.content {
@@ -732,7 +732,7 @@ button:hover {
 /* responsive view for mobile phones and extra small screen sizes */
 @media (max-width: 576px) {
   div.container {
-    max-height: 150vh;
+    height: clamp(100vh, 800px, 120vh);
   }
 
   div.content {
